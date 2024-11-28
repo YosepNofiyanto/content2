@@ -1,0 +1,125 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Halaman utama */
+body {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+}
+
+.container {
+    text-align: center;
+}
+
+/* Styling jam */
+.clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+.circle {
+    width: 100%;
+    height: 100%;
+    border: 8px solid white;
+    border-radius: 50%;
+    position: relative;
+    background: radial-gradient(circle, #ffffff, #ecf0f1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Angka pada jam */
+.number {
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #34495e;
+    transform: translate(-50%, -50%);
+}
+
+/* Jarum jam */
+.hour-hand, .minute-hand, .second-hand {
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    border-radius: 2px;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 100%; /* Titik rotasi di ujung bawah */
+    transform: translate(-50%, -100%) rotate(0deg); /* Posisi awal di tengah */
+}
+
+.hour-hand {
+    height: 80px;
+    background: #34495e;
+}
+
+.minute-hand {
+    height: 110px;
+    background: #2c3e50;
+}
+
+.second-hand {
+    height: 130px;
+    background: red;
+}
+
+/* Titik pusat */
+.center-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: black;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Menu Alarm */
+.alarm-container {
+    margin-top: 20px;
+}
+
+label {
+    font-size: 1.2rem;
+}
+
+input {
+    font-size: 1rem;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+button {
+    padding: 5px 15px;
+    font-size: 1rem;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+#alarm-status {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
